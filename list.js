@@ -39,4 +39,10 @@ export const reverse = (numbers) => {
   };
   return iter(numbers, l());
 };
+
+export const concat = (list1, list2) => {
+  if (isEmpty(list1)) return list2;
+  toString(list1);
+  return cons(head(list1), concat(tail(list1), list2));
+};
 // END
